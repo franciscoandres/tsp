@@ -8,46 +8,62 @@
   <title>The Starter Point</title>
 </head>
 <body>
-  <div class="mw-80 ph3 ph5-m center">
-    <header class="pv3 pv5-s">
-      <h1 class="f5 f1-s tracked upper fw3 pb1 border-wide border-bottom inline-block lead-title">Where all begins</h1>
+  <div class="mw-80 ph3 ph5-m ph5-l center">
+    <header class="mv4">
+      <h1 class="f3-s tracked upper pb1 fw3 lead-title">Where all begins</h1>
     </header>
-    <div class="flex flex-wrap">
-      <ul class="list-none pl0 w-100 w-30-s mt0">
-        <li class="mb3 pv2">
-          <a class="link black hover-opacity bold f4 f2-s" href="content/tsp/">
-            The Starter Point
-          </a>
-        </li>
-        <li class="mb3 pv2">
-          <a class="link black hover-opacity bold f4 f2-s" href="content/pocket-explorer">
-            Pocket Explorer
-          </a>
-        </li>
-        <li class="mb3 pv2">
-          <a class="link black hover-opacity bold f4 f2-s" href="content/viceland">
-            Viceland
-          </a>
-        </li>
-        <li class="pv2">
-          <a class="link black hover-opacity bold f4 f2-s" href="content/login">
-            Login
-          </a>
-        </li>
-      </ul>
-      <ul class="list-none pl0 w-100 w-30-s mt0">
-        <li class="mb3 pv2">
-          <a class="link black hover-opacity bold f4 f2-s" href="content/newsletter">
-            Newsletter forms
-          </a>
-        </li>
-        <li class="mb3 pv2">
-          <a class="link black hover-opacity bold f4 f2-s" href="content/angellist-blog">
-            AngelList Blog
-          </a>
-        </li>
-      </ul>
-    </div>
+    <div id="root"></div>
   </div>
+  <script>
+
+    const paths = [
+      {
+        "title": "The Stater Point",
+        "link": "content/tsp/"
+      },
+      {
+        "title": "Pocket Explorer",
+        "link": "content/pocket-explorer/"
+      },
+      {
+        "title": "Viceland",
+        "link": "content/viceland/"
+      },
+      {
+        "title": "Login",
+        "link": "content/login/"
+      },
+      {
+        "title": "Newsletter",
+        "link": "content/newsletter/"
+      },
+      {
+        "title": "AngelList Blog",
+        "link": "content/angellist-blog/"
+      }
+    ];
+
+    const root = document.getElementById("root");
+    const ul = document.createElement("ul");
+          ul.className = "list-none pl0";
+
+    for (var i = 0; i < paths.length; i++) {
+      const li = document.createElement("li");
+      const a  = document.createElement("a");
+
+      a.className = "f4 link black-80 hover-black";
+      li.className = "mb3";
+
+      a.setAttribute("href", paths[i].link);
+      a.setAttribute("target", "_blank");
+      a.innerHTML = paths[i].title;
+
+      li.appendChild(a);
+      ul.appendChild(li);
+    }
+
+    root.appendChild(ul);
+
+  </script>
 </body>
 </html>
