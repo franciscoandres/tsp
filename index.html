@@ -4,14 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="https://unpkg.com/headliner">
+  <link rel="stylesheet" href="https://unpkg.com/xvx">
   <title>The Starter Point</title>
 </head>
 <body>
-  <div class="mw-80 ph3 ph5-m ph5-l center">
+  <div class="mw_80 ph3 md_ph5 lg_ph5 center">
     <header class="mv4">
-      <h1 class="f3-s tracked upper pb1 fw3 lead-title mb0">Where all begins</h1>
-      <p class="f5 mt0 black-70">A collections of examples using <a class="link blue" href="https://franciscogo.github.io/headliner">Headliner</a> </p>
+      <h1 class="sm_f3 tracked upper pb1 fw3 lh_title mb0">Where all begins</h1>
+      <p class="f5 mt0 black_70">A collections of examples using <a class="link blue" href="https://franciscogo.github.io/headliner">Headliner</a> </p>
     </header>
     <div id="root"></div>
   </div>
@@ -46,14 +46,14 @@
 
     const root = document.getElementById("root");
     const ul = document.createElement("ul");
-          ul.className = "list-none pl0";
+          ul.className = "list pl0";
 
     for (var i = 0; i < paths.length; i++) {
       const li = document.createElement("li");
       const a  = document.createElement("a");
 
-      a.className = "f4 link black-80 hover-black";
-      li.className = "mb3";
+      a.className = "f4 link black_80 hover_black";
+      li.className = "mb2";
 
       a.setAttribute("href", paths[i].link);
       a.setAttribute("target", "_blank");
@@ -64,6 +64,7 @@
     }
 
     root.appendChild(ul);
+
   </script>
 </body>
 </html>
