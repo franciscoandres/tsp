@@ -1,2 +1,2 @@
 # the-starter-point
-Some examples for xvx css
+Some examples for hotlinecss
